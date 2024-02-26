@@ -6,31 +6,31 @@ The system consists of three main tables: Students, Payments, and FeeStatus.
 
 Table Structure
 
-Students Table
-
-Columns:
-USN: Unique Student Number (Primary Key)
-FirstName: First name of the student
-MiddleName: Middle name of the student (nullable)
-LastName: Last name of the student
-Email: Email address of the student
-PhoneNumber: Contact phone number of the student
-SEM: Semester of the student
-Department: Department of the student
-
-Payments Table
-
-Columns:
-PaymentID: Unique identifier for each payment (Primary Key)
-USN: Unique Student Number (Foreign Key referencing Students table)
-Amount: Amount of the payment
-PaymentDate: Date of the payment
-
-FeeStatus Table
-
-Columns:
-USN: Unique Student Number (Primary Key, Foreign Key referencing Students table)
-PaidStatus: Indicates whether the fee is paid (TRUE/FALSE)
+  Students Table
+  
+  Columns:
+  USN: Unique Student Number (Primary Key)
+  FirstName: First name of the student
+  MiddleName: Middle name of the student (nullable)
+  LastName: Last name of the student
+  Email: Email address of the student
+  PhoneNumber: Contact phone number of the student
+  SEM: Semester of the student
+  Department: Department of the student
+  
+  Payments Table
+  
+  Columns:
+  PaymentID: Unique identifier for each payment (Primary Key)
+  USN: Unique Student Number (Foreign Key referencing Students table)
+  Amount: Amount of the payment
+  PaymentDate: Date of the payment
+  
+  FeeStatus Table
+  
+  Columns:
+  USN: Unique Student Number (Primary Key, Foreign Key referencing Students table)
+  PaidStatus: Indicates whether the fee is paid (TRUE/FALSE)
 
 Usage
 
