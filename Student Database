@@ -1,0 +1,41 @@
+CREATE TABLE Students (
+    USN VARCHAR(20) PRIMARY KEY,
+    FirstName VARCHAR(50),
+    MiddleName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    SEM INT,
+    Department VARCHAR(50)
+);
+
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY,
+    USN VARCHAR(20),
+    Amount DECIMAL(10, 2),
+    PaymentDate DATE,
+    FOREIGN KEY (USN) REFERENCES Students(USN)
+);
+
+CREATE TABLE FeeStatus (
+    USN VARCHAR(20) PRIMARY KEY,
+    PaidStatus BOOLEAN,
+    FOREIGN KEY (USN) REFERENCES Students(USN)
+);
+
+
+INSERT INTO Students (USN, FirstName, MiddleName, LastName, Email, PhoneNumber, SEM, Department) 
+VALUES 
+('2AG21AD069', 'Prakesh', NULL, 'Sinha', 'PrakeshSinha@yahoo.com', '1234567890', 4, 'Computer Science'),
+('2AG21AD420', 'Frakesh', NULL, 'Sins', 'FrakeshSins@gmail.com', '9876543210', 3, 'Electrical Engineering');
+
+
+INSERT INTO Payments (PaymentID, USN, Amount, PaymentDate) 
+VALUES 
+(1, '2AG21AD069', 500.00, '2024-02-25'),
+(2, '2AG21AD420', 600.00, '2024-02-26');
+
+INSERT INTO FeeStatus (USN, PaidStatus) 
+VALUES 
+('2AG21AD069', TRUE),  
+('2AG21AD420', FALSE);
