@@ -42,7 +42,6 @@ Sample Data
 Sample data has been provided in the SQL script to demonstrate the structure and functionality of the system. You can customize and expand the data according to your requirements.
 
 Contributors
---> ROHIT JADHAV
---> PRATIK CHITTI
+--> ROHIT JADHAV & PRATIK CHITTI
 
 For any feedback, suggestions, or issues, please commit.
